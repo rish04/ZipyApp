@@ -3,8 +3,8 @@ var register =  require('config/register');
 var login = require('config/login');
 
 module.exports = function(app){
-	app.get('/'function(req,res){
-		res.end("Node-Android-Project");
+	app.get('/',function(req,res){
+		res.end("<h1 style=color:#aeaeae>GO</1=h1>");
 	});
 
 	app.post('/login', function(req,res){
@@ -37,7 +37,7 @@ module.exports = function(app){
 			res.json(found);
 		});
 	});
-	app.post('api/resetpass'function(req,res){
+	app.post('api/resetpass' ,function(req,res){
 		var email=req.body.email;
 		cgpass.respass_init(email,function(found){
 			console.log(found);
